@@ -3,6 +3,7 @@ package com.example.ktmd2.service;
 import com.example.ktmd2.model.Student;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class StudentServiceImpl implements StudentService {
@@ -43,5 +44,8 @@ public class StudentServiceImpl implements StudentService {
                 break;
             }
         }
+    }
+    public void  sortList(){
+        studentList.sort(Comparator.comparing(Student::getMsv));
     }
 }

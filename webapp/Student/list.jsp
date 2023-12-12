@@ -26,6 +26,7 @@
             <th>Address</th>
             <th>Medium Score</th>
             <th><a href="/student?action=creat">Add</a></th>
+            <th><a href="/student?action=sort">Sort</a></th>
         </tr>
         <c:forEach items='${student}' var="Student">
             <tr>

@@ -69,9 +69,17 @@ public class StudentServlet extends HttpServlet {
             case "edit":
                 showEdit(req,resp);
                 break;
+            case "sort":
+                showSort(req,resp);
+                break;
             default:
                 showListStudent(req, resp);
         }
+    }
+
+    private void showSort(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+            studentService.sortList();
+            resp.sendRedirect("/student");
     }
 
 
